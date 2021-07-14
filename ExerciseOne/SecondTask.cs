@@ -5,7 +5,8 @@ using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 using WebDriverManager.Helpers;
 
-namespace ExerciseTwo {
+namespace ExerciseTwo
+{
     public class SecondTask
     {
         public IWebDriver driver;
