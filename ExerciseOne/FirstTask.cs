@@ -12,7 +12,7 @@ namespace ExerciseOne
     {
         public IWebDriver driver;
 
-        private readonly string url = @"https://www.selenium.dev/documentation/en/getting_started/";
+        private readonly string URL = @"https://www.selenium.dev/documentation/en/getting_started/";
         private readonly string GRID = @"//a[@href='https://www.selenium.dev/documentation/en/grid/']";
         private readonly string COMPONENTS = @"//a[@href='https://www.selenium.dev/documentation/en/grid/grid_3/components_of_a_grid/']";
         private readonly string GIT_LINK = "top-github-link-text";
@@ -31,7 +31,7 @@ namespace ExerciseOne
         [Test]
         public void CheckLinks()
         {
-            driver.Navigate().GoToUrl(url);
+            driver.Navigate().GoToUrl(URL);
             this.driver.FindElement(By.XPath(GRID)).Click();
             Assert.AreEqual("Grid :: Documentation for Selenium", driver.Title);
             this.driver.FindElement(By.XPath(COMPONENTS)).Click();
