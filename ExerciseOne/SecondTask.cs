@@ -32,6 +32,7 @@ namespace ExerciseTwo
             this.driver.FindElement(By.Id("email")).SendKeys("Ivan");
             this.driver.FindElement(By.Id("password")).SendKeys("Ivan");
             this.driver.FindElement(By.XPath(SUBMIT)).Click();
+
             Assert.AreEqual(ERROR_MESSAGE, driver.FindElement(By.XPath(ERROR)).Text);
         }
 
@@ -40,6 +41,7 @@ namespace ExerciseTwo
         {
             this.driver.Navigate().GoToUrl(URL);
             this.driver.FindElement(By.XPath(SUBMIT)).Click();
+
             Assert.AreEqual("Email is required.", driver.FindElement(By.XPath(EMAIL_IS_REQUIRED)).Text);
             Assert.AreEqual("Password is required.", driver.FindElement(By.XPath(PASSWORD_IS_REQUIRED)).Text);
         }

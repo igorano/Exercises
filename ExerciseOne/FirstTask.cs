@@ -38,6 +38,7 @@ namespace ExerciseOne
             Assert.AreEqual("Components :: Documentation for Selenium", driver.Title);
             this.driver.FindElement(By.Id(GIT_LINK)).Click();
             driver.SwitchTo().Window(driver.WindowHandles.Last());
+
             Assert.AreEqual("Sign in to GitHub · GitHub", driver.Title);
             //Assert.AreEqual("Editing seleniumhq.github.io/components_of_a_grid.en.md at dev · SeleniumHQ/seleniumhq.github.io", driver.Title);
         }
